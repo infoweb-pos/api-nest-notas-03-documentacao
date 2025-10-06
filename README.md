@@ -94,12 +94,12 @@ async function bootstrap() {
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('api', app, document);
+  SwaggerModule.setup('docs', app, document);
 
   const port = process.env.PORT || 3000;
   await app.listen(port);
   console.log(`API rodando na porta ${port}`);
-  console.log(`Documentação Swagger disponível em http://localhost:${port}/api`);
+  console.log(`Documentação Swagger disponível em http://localhost:${port}/docs`);
 }
 bootstrap();
 ```
@@ -467,7 +467,7 @@ Após implementar todas as anotações:
    ```
 
 2. **Acesse a documentação:**
-   Abra seu navegador em: `http://localhost:3000/api`
+   Abra seu navegador em: `http://localhost:3000/docs`
 
 3. **Explore a interface Swagger UI:**
    - Você verá todos os endpoints organizados por tags
